@@ -35,6 +35,10 @@ android {
     buildConfigField 'String[]', 'LANGUAGES', '{ "' + languages.join('", "') + '" }'
     resConfigs languages
   }
+  
+  buildFeatures {
+    buildConfig true
+  }
 
   sourceSets.all {
     def javaDir = it.java.srcDirs.find { it.name == 'java' }
